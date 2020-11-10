@@ -1,5 +1,24 @@
 use std::collections::HashMap;
 
+fn mean(list: &Vec<i32>) -> f64 {
+    let mut sum = 0;
+    for value in list {
+        sum += value;
+    }
+    sum as f64 / (list.len() as f64)
+}
+
+fn median(list: &Vec<i32>) -> f64 {
+    let len = list.len();
+    if len % 2 == 0 {
+        // len is even
+        return (list[(len / 2)] + list[(len / 2) - 1]) as f64 / 2.0;
+    } else {
+        // len is odd
+        return list[(len / 2)] as f64;
+    }
+}
+
 fn main() {
     // Creating a new Hash Map
     let teams = vec![String::from("Blue"), String::from("Yellow")];
@@ -37,4 +56,10 @@ fn main() {
     scores.entry(String::from("Blue")).or_insert(50);
 
     println!("{:?}", scores);
+
+    // Mean
+    let integers = vec![2, 5, 10, 34, 43, 87];
+    println!("Given the sorted Vec: {:?}", integers);
+    println!("Mean: {}", mean(&integers));
+    println!("Median: {}", median(&integers));
 }
