@@ -75,7 +75,7 @@ fn main() {
 
     println!("{:?}", scores);
 
-    // Mean
+    // Mean, Median and Mode
     let integers = vec![2, 2, 2, 2, 5, 10, 10, 10, 34, 34, 43, 87];
     println!("Given the sorted Vec: {:?}", integers);
     println!("Mean: {}", mean(&integers));
