@@ -19,6 +19,24 @@ fn median(list: &Vec<i32>) -> f64 {
     }
 }
 
+fn mode(list: &Vec<i32>) -> i32 {
+    let mut map = HashMap::new();
+    for value in list {
+        let count = map.entry(value).or_insert(0);
+        *count += 1;
+    }
+
+    let mut max_count = 0;
+    let mut mode = 0;
+    for (key, value) in &map {
+        if value > &max_count {
+            max_count = *value;
+            mode = **key;
+        }
+    }
+    mode
+}
+
 fn main() {
     // Creating a new Hash Map
     let teams = vec![String::from("Blue"), String::from("Yellow")];
@@ -58,8 +76,9 @@ fn main() {
     println!("{:?}", scores);
 
     // Mean
-    let integers = vec![2, 5, 10, 34, 43, 87];
+    let integers = vec![2, 2, 2, 2, 5, 10, 10, 10, 34, 34, 43, 87];
     println!("Given the sorted Vec: {:?}", integers);
     println!("Mean: {}", mean(&integers));
     println!("Median: {}", median(&integers));
+    println!("Mode: {}", mode(&integers));
 }
