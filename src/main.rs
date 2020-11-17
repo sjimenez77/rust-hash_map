@@ -1,4 +1,7 @@
+// See https://doc.rust-lang.org/book/ch08-03-hash-maps.html#summary
+
 use std::collections::HashMap;
+use std::ops::Add;
 
 fn mean(list: &Vec<i32>) -> f64 {
     let mut sum = 0;
@@ -10,13 +13,13 @@ fn mean(list: &Vec<i32>) -> f64 {
 
 fn median(list: &Vec<i32>) -> f64 {
     let len = list.len();
-    if len % 2 == 0 {
+    return if len % 2 == 0 {
         // len is even
-        return (list[(len / 2)] + list[(len / 2) - 1]) as f64 / 2.0;
+        (list[(len / 2)] + list[(len / 2) - 1]) as f64 / 2.0
     } else {
         // len is odd
-        return list[(len / 2)] as f64;
-    }
+        list[(len / 2)] as f64
+    };
 }
 
 fn mode(list: &Vec<i32>) -> i32 {
@@ -37,6 +40,47 @@ fn mode(list: &Vec<i32>) -> i32 {
     mode
 }
 
+fn convert_to_pig_latin(s: &str) -> String {
+    let len = s.len();
+    let mut word_start = 0;
+    let mut result = String::from("");
+    for (i, c) in s.chars().enumerate() {
+        if c == ' ' || len == (i + 1) {
+            for char in s[word_start..i].to_lowercase().chars() {
+                match char {
+                    'a' | 'e' | 'i' | 'o' | 'u' => {
+                        if c == ' ' {
+                            result = result.add(&s[word_start..i]).add("-hay ");
+                        } else {
+                            result = result.add(&s[word_start..i + 1]).add("-hay");
+                        }
+                    }
+                    _ => {
+                        if c == ' ' {
+                            result = result
+                                .add(&s[word_start + 1..i])
+                                .add("-")
+                                .add(&s[word_start..word_start + 1])
+                                .add("ay ")
+                        } else {
+                            result = result
+                                .add(&s[word_start + 1..i])
+                                .add("-")
+                                .add(&s[word_start..word_start + 1])
+                                .add("ay")
+                        }
+                    }
+                };
+                break;
+            }
+            if c == ' ' {
+                word_start = i + 1;
+            }
+        }
+    }
+    result
+}
+
 fn main() {
     // Creating a new Hash Map
     let teams = vec![String::from("Blue"), String::from("Yellow")];
@@ -55,7 +99,7 @@ fn main() {
 
     // Accessing Values in a Hash Map
     let team_name = String::from("Blue");
-    let score = scores.get(&team_name);
+    let _score = scores.get(&team_name);
 
     for (key, value) in &scores {
         println!("{}: {}", key, value);
@@ -81,4 +125,22 @@ fn main() {
     println!("Mean: {}", mean(&integers));
     println!("Median: {}", median(&integers));
     println!("Mode: {}", mode(&integers));
+
+    // Pig latin conversion
+    println!(
+        "Pig Latin Conversion from 'Apple': {}",
+        convert_to_pig_latin("Apple")
+    );
+    println!(
+        "Pig Latin Conversion from 'Molona': {}",
+        convert_to_pig_latin("Molona")
+    );
+    println!(
+        "Pig Latin Conversion from 'Apple Molona': {}",
+        convert_to_pig_latin("Apple Molona")
+    );
+    println!(
+        "Pig Latin Conversion from 'Santos Jimenez': {}",
+        convert_to_pig_latin("Santos Jimenez")
+    );
 }
