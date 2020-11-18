@@ -22,7 +22,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3092cae-a86e-4abe-a77d-af31f08e03ed" name="Default Changelist" comment="Added pig latin conversion exercise." />
+    <list default="true" id="b3092cae-a86e-4abe-a77d-af31f08e03ed" name="Default Changelist" comment="Added pig latin conversion exercise.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,19 +56,6 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run hash_map" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package hash_map --bin hash_map" />
@@ -99,6 +88,7 @@
       <updated>1605634585086</updated>
       <workItem from="1605634586938" duration="3946000" />
       <workItem from="1605639622354" duration="3589000" />
+      <workItem from="1605689918675" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Added pig latin conversion exercise.">
       <created>1605653669160</created>
@@ -123,6 +113,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added pig latin conversion exercise." />
