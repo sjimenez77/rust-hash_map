@@ -49,13 +49,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.15.0/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run hash_map" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package hash_map --bin hash_map" />
@@ -88,7 +101,9 @@
       <updated>1605634585086</updated>
       <workItem from="1605634586938" duration="3946000" />
       <workItem from="1605639622354" duration="3589000" />
-      <workItem from="1605689918675" duration="427000" />
+      <workItem from="1605689918675" duration="1071000" />
+      <workItem from="1605734501120" duration="815000" />
+      <workItem from="1606055442661" duration="568000" />
     </task>
     <task id="LOCAL-00001" summary="Added pig latin conversion exercise.">
       <created>1605653669160</created>
@@ -104,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605692432825</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated IntelliJ config">
+      <created>1605692561061</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605692561061</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,18 +190,23 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1353" height="520" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1605640565687" />
-    <state x="185" y="301" key="SettingsEditor" timestamp="1605653486852">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="185" y="301" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1605653486852" />
-    <state x="297" y="449" key="Vcs.Push.Dialog.v2" timestamp="1605692446339">
+    <state x="185" y="302" key="SettingsEditor" timestamp="1605713422408">
       <screen x="0" y="23" width="2560" height="1335" />
     </state>
-    <state x="297" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1605653676659" />
+    <state x="185" y="301" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1605653486852" />
+    <state x="185" y="302" key="SettingsEditor/0.23.2560.1335@0.23.2560.1335" timestamp="1605713422408" />
+    <state x="297" y="460" key="Vcs.Push.Dialog.v2" timestamp="1605692562778">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="297" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1605692562778" />
     <state x="297" y="449" key="Vcs.Push.Dialog.v2/0.23.2560.1335@0.23.2560.1335" timestamp="1605692446339" />
     <state x="510" y="641" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605653595323">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="510" y="641" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440@0.0.2560.1440" timestamp="1605653595323" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1606055807036">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1606055807036" />
   </component>
 </project>
